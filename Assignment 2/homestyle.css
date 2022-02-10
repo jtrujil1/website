@@ -13,6 +13,11 @@ h2 {
     text-shadow: 2px 2px 1px #c2c0b2;
 }
 
+h3 {
+    font-size: 45px;
+    text-shadow: 2px 2px 8px #afada4;
+  }
+
 img {
     opacity: 0.5;
 }
@@ -43,7 +48,7 @@ img {
     text-align: center;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
     #about-text {
         margin-left: 10%;
         margin-right: 10%;
@@ -54,5 +59,9 @@ img {
         margin-left: 5%;
         margin-right: 5%;
         text-shadow: 2px 2px 1px #c2c0b2;
+    }
+
+    h3 {
+        font-size: 30px;
     }
 }
