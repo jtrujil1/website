@@ -27,7 +27,7 @@ header {
 
 #logo {
   font-weight: bold;
-  font-size: 35px;
+  font-size: 40px;
   display: flex;
   align-items: center;
   font-family: "Source Code Pro", "Poppins", san-serif;
@@ -118,13 +118,17 @@ ul li:hover {
   margin-bottom: 10px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
   header nav {
     display: none;
   }
 
   #menu-icon {
     display: block;
+  }
+
+  #logo {
+    font-size: 35px;
   }
 }
 
