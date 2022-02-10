@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins|Source+Code+Pro");
+
+#contact-container {
+    padding-top: 55px;
+    padding-bottom: 55px;
+    margin-left: 16%;
+    margin-right: 16%;
+}
+
+input[type=text], select, textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+input[type=tel] {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+  
+input[type=submit] {
+    background-color: #5A95AD;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Poppins", "Source Code Pro", san-serif;
+}
+  
+input[type=submit]:hover {
+    background-color: #FABF7D;
+}
+  
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}

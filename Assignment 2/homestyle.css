@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins|Source+Code+Pro");
+
+h2 {
+    font-weight: 1000;
+    font-size: 45px;
+    display: flex;
+    align-items: center;
+    font-family: "Source Code Pro", "Poppins", san-serif;
+    color: #091547;
+    justify-content: center;
+    z-index: 1;
+    opacity: 100%;
+    text-shadow: 2px 2px 1px #c2c0b2;
+}
+
+img {
+    opacity: 0.5;
+}
+
+#slogan {
+    text-transform: uppercase;
+    background-image: url('home_img.jpg');
+    background-size: cover;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+}
+
+#about {
+    padding-top: 55px;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 55px;
+}
+
+#about-text {
+    margin-top: 35px;
+    font-family: "Poppins", "Source Code Pro", san-serif;
+    margin-left: 28%;
+    margin-right: 28%;
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    #about-text {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    h2 {
+        font-size: 30px;
+        margin-left: 5%;
+        margin-right: 5%;
+        text-shadow: 2px 2px 1px #c2c0b2;
+    }
+}

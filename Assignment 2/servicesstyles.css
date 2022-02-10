@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins|Source+Code+Pro");
+
+h3 {
+    text-shadow: 2px 2px 8px #afada4;
+}
+
+#services-text {
+    padding-top: 55px;
+    display: block;
+    padding-bottom: 55px;
+
+}
+
+img{
+    width: 100%; /* or any custom size */
+    height: 100%; 
+    object-fit: contain;
+}
+
+.row {
+    margin-top: 100px;
+    display: flex;
+    vertical-align: middle;
+}
+
+.right {
+    height: 400px;
+    width: 35%;
+    overflow: hidden;
+    margin-left: 3%;
+    margin-right: 10%;
+}
+
+.left {
+    height: 400px;
+    width: 35%;
+    overflow: hidden;
+    margin-right: 3%;
+    margin-left: 10%;
+}
+
+@media only screen and (max-width: 600px) {
+    .left {
+        height: 500px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        margin-right: 2%;
+        margin-left: 7%;
+    }
+
+    .right {
+        height: 500px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        margin-left: 2%;
+        margin-right: 7%;
+    }
+
+    .row {
+        margin-top: 35px;
+    }
+  }

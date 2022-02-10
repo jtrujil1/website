@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <title>Boston Tech Optics</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="contactstyles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      .att a{
+        font-size: 10px;
+        display: flex;
+        justify-content: center;
+        z-index: 0;
+        color: #CCC;
+      }
+      h3 {
+        text-shadow: 2px 2px 8px #afada4;
+        padding-bottom: 35px;
+      }
+      h4 {
+        color: #9BDEFA;
+        font-size: 20px;
+        text-shadow: 2px 2px 1px #000000;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div id="logo"><a href="index.html">Boston Tech Optics</a></div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div id="menu-icon" onclick="toggleMobileMenu(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+        <ul class="mobile-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+    <script src="index.js"></script>
+    <div id="contact-container">
+      <h3>Book An Appointment Today</h3>
+      <div>
+        <h4>Boston Tech Optics</h4>
+        <br> 23 Sunset Ave, Boston, MA, 02116
+        <br>
+        <p><i class="fa fa-phone" style="font-size:19px"></i></i>  +1-9999878398</p>
+        <br>
+      </div>
+      <div>We look forward to hearing from you!</div>
+      <div class="container">
+        <form onsubmit="alert('Form Submitted!')">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+          <label for="phone">Phone Number</label> <small> Format: 123-456-7890</small>
+          <input type="tel" id="phone" name="phonenum" placeholder="Your phone number.." pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+          <label for="subject">Notes to the Doctor</label>
+          <textarea id="subject" name="subject" placeholder="What can we help with.." style="height:200px" required></textarea>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+    <footer>
+      <div class="att">
+        <a target="_blank" href="https://www.vecteezy.com/free-photos">Free 
+          Stock photos by Vecteezy</a>
+      </div>
+      <p class="text-center">Boston Tech Optics © 1997</p>
+    </footer>
+  </body>
+</html>

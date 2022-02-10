@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins|Source+Code+Pro");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  font-family: "Poppins", sans-serif;
+}
+
+header a {
+  text-decoration: none;
+}
+
+header {
+  padding: 0 20px;
+  background-color: #5A95AD;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+#logo {
+  font-weight: bold;
+  font-size: 35px;
+  display: flex;
+  align-items: center;
+  font-family: "Source Code Pro", "Poppins", san-serif;
+}
+
+#logo a {
+  color: #9BDEFA;
+  text-shadow: 2px 2px 1px #000000;
+}
+
+ul {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 20px;
+}
+
+ul a {
+  color: white;
+}
+
+ul li {
+  padding: 5px;
+  margin-left: 10px;
+}
+
+ul li:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+#menu-icon {
+  margin: auto 0;
+  display: none;
+  cursor: pointer;
+}
+
+#menu-icon div {
+  width: 35px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.open .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .bar2 {
+  opacity: 0;
+}
+
+.open .bar3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -8px);
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.open .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #5A95AD;
+  color: #1d1f1d;
+  margin-top: 10%;
+
+}
+
+.open .mobile-menu ul  a{
+  color: #1d1f1d;
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 70%;
+  height: calc(100vh - 50px);
+  width: 30%;
+  height: 20%;
+}
+
+.mobile-menu li {
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  header nav {
+    display: none;
+  }
+
+  #menu-icon {
+    display: block;
+  }
+}
+
+footer {
+  width:100%;
+  background-color:#5A95AD;
+  min-height:80px;
+  padding:10px 0px 25px 0px;
+  display: block;
+  
+}
+
+footer p { 
+  font-size:13px;
+  color: white;
+  padding-bottom:0px;
+  margin-bottom:8px;
+  text-align: center;
+  /* align-content: center !important; */
+  justify-content: center;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  font-family: "Source Code Pro", "Poppins", san-serif;
+  color: #252b2e;
+  justify-content: center;
+  z-index: 1;
+  opacity: 100%;
+  /* text-shadow: 2px 2px 8px #afada4; */
+}
