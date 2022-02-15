@@ -1,0 +1,20 @@
+songs {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+heading {
+    font-size: 40px;
+}
+
+artist {
+    font-size: 30px;
+}
+
+songTitle {
+    font-size: 25px;
+}
+
+heading, songTitle, artist, genres, yearReleased {
+    display: block;
+}
