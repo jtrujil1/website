@@ -1,84 +1,89 @@
 <?xml-stylesheet type="text/css" href="style.css"?>
 <songs>
-    <heading></heading>
+    <heading>Set List</heading>
     <song>
-        <artist></artist> 
-        <songTitle></songTitle>
+        <artist>Natalia Lafourcade</artist> 
+        <songTitle>Mi Lugar Favorito</songTitle>
         <genres>
-            <genre></genre>
+            <genre>Indie</genre>
+            <genre>Pop</genre>
         </genres>
-        <yearReleased></yearReleased>
+        <yearReleased>2015</yearReleased>
     </song>
     <song>
-        <artist></artist> 
-        <songTitle></songTitle>
+        <artist>The Cure</artist> 
+        <songTitle>Just Like Heaven</songTitle>
         <genres>
-            <genre></genre>
+            <genre>Post Punk</genre>
+            <genre>New Wave</genre>
         </genres>
-        <yearReleased></yearReleased>
+        <yearReleased>1987</yearReleased>
     </song>
     <song>
-        <artist></artist> 
-        <songTitle></songTitle>
+        <artist>The Score</artist> 
+        <songTitle>Up</songTitle>
         <genres>
-            <genre></genre>
+            <genre>Pop</genre>
         </genres>
-        <yearReleased></yearReleased>
+        <yearReleased>2016</yearReleased>
     </song>
     <song>
-        <artist></artist> 
-        <songTitle></songTitle>
+        <artist>Maná</artist> 
+        <songTitle>Manda Una Señal</songTitle>
         <genres>
-            <genre></genre>
+            <genre>Rock</genre>
         </genres>
-        <yearReleased></yearReleased>
+        <yearReleased>2006</yearReleased>
     </song>
     <song>
-        <artist></artist> 
-        <songTitle></songTitle>
+        <artist>Dexys Midnight Runners</artist> 
+        <songTitle>Come On Eileen</songTitle>
         <genres>
-            <genre></genre>
+            <genre>Folk</genre>
+            <genre>Pop</genre>
         </genres>
-        <yearReleased></yearReleased>
+        <yearReleased>1982</yearReleased>
     </song>
     <song>
-        <artist></artist> 
-        <songTitle></songTitle>
+        <artist>Jesse &amp; Joy</artist> 
+        <songTitle>Espacio Sideral</songTitle>
         <genres>
-            <genre></genre>
+            <genre>Pop Rock</genre>
         </genres>
-        <yearReleased></yearReleased>
+        <yearReleased>2006</yearReleased>
     </song>
     <song>
-        <artist></artist> 
-        <songTitle></songTitle>
+        <artist>Philip Bailey</artist> 
+        <songTitle>Easy Lover</songTitle>
         <genres>
-            <genre></genre>
+            <genre>Dance Pop</genre>
         </genres>
-        <yearReleased></yearReleased>
+        <yearReleased>1985</yearReleased>
     </song>
     <song>
-        <artist></artist> 
-        <songTitle></songTitle>
+        <artist>Vetusta Morla</artist> 
+        <songTitle>Valiente</songTitle>
         <genres>
-            <genre></genre>
+            <genre>Rock</genre>
         </genres>
-        <yearReleased></yearReleased>
+        <yearReleased>2008</yearReleased>
     </song>
     <song>
-        <artist></artist> 
-        <songTitle></songTitle>
+        <artist>The Outfield</artist> 
+        <songTitle>All the Love in the World</songTitle>
         <genres>
-            <genre></genre>
+            <genre>Pop Rock</genre>
+            <genre>New Wave</genre>
         </genres>
-        <yearReleased></yearReleased>
+        <yearReleased>1985</yearReleased>
     </song>
     <song>
-        <artist></artist> 
-        <songTitle></songTitle>
+        <artist>Siddhartha</artist> 
+        <songTitle>Ser Parte</songTitle>
         <genres>
-            <genre></genre>
+            <genre>Indie</genre>
+            <genre>New Era</genre>
         </genres>
-        <yearReleased></yearReleased>
+        <yearReleased>2016</yearReleased>
     </song>
 </songs>
