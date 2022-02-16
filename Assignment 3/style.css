@@ -1,4 +1,4 @@
-songs {
+/* songs {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 20px;
 }
@@ -17,4 +17,26 @@ songTitle {
 
 heading, songTitle, artist, genres, yearReleased {
     display: block;
+} */
+
+
+songs {
+    color: white;
+    background-color : gray;
+    width: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+heading {
+    color: #54006B;
+    font-size : 40px;
+    background-color : #E2C4EA;
+}
+heading, title, author, genres, yearReleased {
+    display : block;
+}
+
+title {
+    font-size : 25px;
+    font-weight : bold;
 }
