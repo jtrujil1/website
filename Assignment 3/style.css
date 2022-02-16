@@ -34,12 +34,13 @@ heading {
     font-size : 40px;
     background-color : #E2C4EA;
     text-transform: uppercase;
+    text-align: center;
 }
-heading, title, author, genres, yearReleased {
+heading, songTitle, author, genres, yearReleased {
     display : block;
 }
 
-title {
+songTitle {
     font-size : 25px;
     font-weight : bold;
 }
