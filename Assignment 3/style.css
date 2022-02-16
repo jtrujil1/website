@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Gochi+Hand|Gochi+Hand&display=swap");
+
 /* songs {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 20px;
@@ -21,16 +23,17 @@ heading, songTitle, artist, genres, yearReleased {
 
 
 songs {
-    color: white;
-    background-color : gray;
+    color: #A160B3;
+    background-color : white;
     width: 100%;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Gochi Hand', cursive;
 }
 
 heading {
     color: #54006B;
     font-size : 40px;
     background-color : #E2C4EA;
+    text-transform: uppercase;
 }
 heading, title, author, genres, yearReleased {
     display : block;
