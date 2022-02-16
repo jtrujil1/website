@@ -2,42 +2,42 @@
 <songs>
     <heading>Setlist</heading>
     <song>
-        <artist>Natalia Lafourcade</artist> 
         <songTitle>Mi Lugar Favorito</songTitle>
+        <artist>Natalia Lafourcade</artist> 
         <genres>
-            <genre>Indie</genre>
+            <genre><first>Indie</first></genre>
             <genre>Pop</genre>
         </genres>
         <yearReleased>2015</yearReleased>
     </song>
     <song>
-        <artist>The Cure</artist> 
         <songTitle>Just Like Heaven</songTitle>
+        <artist>The Cure</artist> 
         <genres>
-            <genre>Post Punk</genre>
+            <genre><first>Post Punk</first></genre>
             <genre>New Wave</genre>
         </genres>
         <yearReleased>1987</yearReleased>
     </song>
     <song>
-        <artist>The Score</artist> 
         <songTitle>Up</songTitle>
+        <artist>The Score</artist> 
         <genres>
-            <genre>Pop</genre>
+            <genre><first>Pop</first></genre>
         </genres>
         <yearReleased>2016</yearReleased>
     </song>
     <song>
-        <artist>Maná</artist> 
         <songTitle>Manda Una Señal</songTitle>
+        <artist>Maná</artist> 
         <genres>
-            <genre>Rock</genre>
+            <genre><first>Rock</first></genre>
         </genres>
         <yearReleased>2006</yearReleased>
     </song>
     <song>
-        <artist>Dexys Midnight Runners</artist> 
         <songTitle>Come On Eileen</songTitle>
+        <artist>Dexys Midnight Runners</artist> 
         <genres>
             <genre>Folk</genre>
             <genre>Pop</genre>
@@ -45,32 +45,32 @@
         <yearReleased>1982</yearReleased>
     </song>
     <song>
-        <artist>Jesse &amp; Joy</artist> 
         <songTitle>Espacio Sideral</songTitle>
+        <artist>Jesse &amp; Joy</artist> 
         <genres>
             <genre>Pop Rock</genre>
         </genres>
         <yearReleased>2006</yearReleased>
     </song>
     <song>
-        <artist>Philip Bailey</artist> 
         <songTitle>Easy Lover</songTitle>
+        <artist>Philip Bailey</artist> 
         <genres>
             <genre>Dance Pop</genre>
         </genres>
         <yearReleased>1985</yearReleased>
     </song>
     <song>
-        <artist>Vetusta Morla</artist> 
         <songTitle>Valiente</songTitle>
+        <artist>Vetusta Morla</artist> 
         <genres>
             <genre>Rock</genre>
         </genres>
         <yearReleased>2008</yearReleased>
     </song>
     <song>
-        <artist>The Outfield</artist> 
         <songTitle>All the Love in the World</songTitle>
+        <artist>The Outfield</artist> 
         <genres>
             <genre>Pop Rock</genre>
             <genre>New Wave</genre>
@@ -78,8 +78,8 @@
         <yearReleased>1985</yearReleased>
     </song>
     <song>
-        <artist>Siddhartha</artist> 
         <songTitle>Ser Parte</songTitle>
+        <artist>Siddhartha</artist> 
         <genres>
             <genre>Indie</genre>
             <genre>New Era</genre>

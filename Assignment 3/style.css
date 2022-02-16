@@ -1,46 +1,53 @@
 @import url("https://fonts.googleapis.com/css?family=Gochi+Hand|Gochi+Hand&display=swap");
 
-/* songs {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 20px;
-}
-
-heading {
-    font-size: 40px;
-}
-
-artist {
-    font-size: 30px;
-}
-
-songTitle {
-    font-size: 25px;
-}
-
-heading, songTitle, artist, genres, yearReleased {
-    display: block;
-} */
-
-
 songs {
-    color: #A160B3;
+    color: #5C3766;
     background-color : white;
     width: 100%;
     font-family: 'Gochi Hand', cursive;
+    text-align:center;
+    font-size : 150%;
+}
+
+song{
+    margin:0.5em; 
+    padding:0.5em;
 }
 
 heading {
     color: #54006B;
-    font-size : 40px;
+    font-size : 400%;
     background-color : #E2C4EA;
     text-transform: uppercase;
     text-align: center;
 }
-heading, songTitle, author, genres, yearReleased {
+
+heading, songTitle, artist, genres, yearReleased {
     display : block;
 }
 
+genre {
+    border-left: 2px solid;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+}
+
+genre:first-child {
+    border-left: none;
+    padding-left: 0;
+}
+
+artist {
+    font-size : 125%;
+}
+
 songTitle {
-    font-size : 25px;
+    color: #A160B3;
+    font-size : 200%;
     font-weight : bold;
+}
+
+yearReleased {
+    padding-bottom: 1.8%;
+    border-bottom: 1px solid #E2C4EA;
 }
