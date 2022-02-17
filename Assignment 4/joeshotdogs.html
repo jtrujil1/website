@@ -51,8 +51,22 @@
 
         <script>
             var hotdogs = parseInt(prompt("How many hotdogs do you want?"));
+            while (isNaN(hotdogs)) {
+                alert("Please enter a valid number");
+                hotdogs = parseInt(prompt("How many hotdogs do you want?"));
+            }
+
             var fries = parseInt(prompt("How many fries do you want?"));
+            while (isNaN(fries)) {
+                alert("Please enter a valid number");
+                fries = parseInt(prompt("How many fries do you want?"));
+            }
+            
             var sodas = parseInt(prompt("How many sodas?"));
+            while (isNaN(sodas)) {
+                alert("Please enter a valid number");
+                sodas = parseInt(prompt("How many sodas?"));
+            }
 
             var subtotal = (hotdogs * 3.75) + (fries * 2.00) + (sodas * 1.80);
             var discount = 0;
