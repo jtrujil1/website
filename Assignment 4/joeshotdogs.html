@@ -35,7 +35,16 @@
                 color: #E61D07;
             }
 
+            @media only screen and (max-width: 800px) {
+                h1 {
+                    font-size: 400%;
+                }
+                h3, h4 {
+                    font-size: 200%;
+                }
+            }
         </style>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
     </head>
     <body>
         <h1>Joe's Hotdog Stand</h1>
@@ -70,7 +79,7 @@
 
             document.write("<h4>tax: $" + Number(tax).toFixed(2) + "</h4>");
             document.write("<h4>total: $" + Number(total).toFixed(2)
-                 + "</h4>");         
+                 + "</h4>");
         </script>
     </body>
 </html>
