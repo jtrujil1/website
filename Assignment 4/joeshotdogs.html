@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>Joe's Hotdog Stand</title>
+        
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Modak&family=Patrick+Hand&display=swap");
+
+            h1 {
+                font-size: 600%;
+                font-weight: 1;
+                font-family: 'Modak', cursive;
+                text-align: center;
+                padding-top: 3%;
+                padding-bottom: 3%;
+                background-color: #E61D07;
+                color:#FFD33C;
+                text-shadow: 2px 2px 1px #E66512;
+            }
+
+            h3, h4 {
+                font-family: 'Patrick Hand', cursive;
+                text-align: left;
+                font-size: 250%;
+                padding-bottom: 0.2%;
+                padding-top: 0.2%;
+            }
+
+            h3 {
+                padding-left: 45%;
+                color: #E66512;
+            }
+
+            h4 {
+                padding-left: 35%;
+                color: #E61D07;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Joe's Hotdog Stand</h1>
+
+        <script>
+            var hotdogs = parseInt(prompt("How many hotdogs do you want?"));
+            var fries = parseInt(prompt("How many fries do you want?"));
+            var sodas = parseInt(prompt("How many sodas?"));
+
+            var subtotal = (hotdogs * 3.75) + (fries * 2.00) + (sodas * 1.80);
+            var discount = 0;
+
+            if (subtotal >= 20.00) {
+                discount = subtotal * 0.10;
+                subtotal -= discount;
+            }
+
+            var tax = subtotal * 0.0625;
+            var total = subtotal + tax;
+
+            document.write("<h4>Order: </h4>");
+            document.write("<h3>" + hotdogs + " x hotdogs</h3>");
+            document.write("<h3>" + fries + " x fries</h3>");
+            document.write("<h3>" + sodas + " x sodas</h3>");
+
+            document.write("<h4>subtotal: $" + Number(subtotal).toFixed(2) 
+                + "</h4>");
+
+            if (discount > 0)
+                document.write("<h4>discount: $" + Number(discount).toFixed(2) 
+                    + "</h4>");
+
+            document.write("<h4>tax: $" + Number(tax).toFixed(2) + "</h4>");
+            document.write("<h4>total: $" + Number(total).toFixed(2)
+                 + "</h4>");         
+        </script>
+    </body>
+</html>
