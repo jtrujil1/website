@@ -72,7 +72,7 @@
             <div class="button" onclick="lottery()"><p>Try my luck!</p></div>
             <br>
             <div class="results" style="display: inline-flex;">
-                <p style="padding-right: 6px;">Your pick:</p>
+                <p style="padding-right: 6px;">Pick:</p>
                 <p id="pickResult"> </p>
             </div>
             <br>
@@ -100,12 +100,9 @@
                 <p style="padding-right: 6px;">Payout:</p>
                 <p id="payoutResult"> </p>
             </div>
-            
         </div>
-
         <script>
             function lottery() {
-                
                 var winningNums = [12, 15, 24, 35, 48];
                 var winningLuckyB = 3;
                 var pick = [];
