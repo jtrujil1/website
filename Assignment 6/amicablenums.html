@@ -1,0 +1,116 @@
+<html>
+  <head>
+    <title>Amicable Numbers</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        h1 {
+            font-size: 500%;
+                font-weight: 1;
+                text-align: center;
+                padding-top: 3%;
+                padding-bottom: 3%;
+                color:#E05B36;
+                border-bottom: #E05B36 2px solid;
+        }
+
+        #numResults, #factors {
+            color: #ED8F2D;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media only screen and (max-width: 800px) {
+                h1 {
+                    font-size: 300%;
+                }
+                p {
+                    font-size: 100%;
+                }
+            }
+    </style>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  </head>
+  <body>
+        <h1>Amicable Numbers Checker</h1>
+        <div class="container">
+        <p>Enter two numbers to check if they are amicable</p>
+            <form name="contactForm" >
+                <input type="text" id="num1" name="num1" placeholder="First number">
+                <input type="text" id="num2" name="num2" placeholder="Second number">
+                <input type="button" value="Check" id="button" onclick="return checkAmicable()">
+            </form>
+            <p id="numResults"></p>
+        <p id="factors"> </p>
+        </div>
+    
+    <script>
+        function getFactors(num) {
+            factors = [1];
+            for(let i = 2; i < num; i++) {
+                if(num % i == 0) {
+                    factors.push(i);
+                }
+            }
+            return factors;
+        }
+
+        function isAmicable(x, y) {
+            xFactors = getFactors(x);
+            yFactors = getFactors(y);
+            xSum = xFactors.reduce((a, b) => a + b, 0);
+            ySum = yFactors.reduce((a, b) => a + b, 0);
+
+            if (ySum == x && xSum == y) {
+                document.getElementById("numResults").innerHTML = "The numbers: " + x + " and " + y + " are amicable";
+            } else {
+                document.getElementById("numResults").innerHTML = "The numbers: " + x + " and " + y + " are not amicable";
+            }
+
+            factorStr = "factors of " + x + ": ";
+            for(let i = 0; i < xFactors.length; i++) {
+                factorStr += xFactors[i] + "   ";
+            }
+
+            factorStr += "<br>factors of " + y + ": ";
+            for(let i = 0; i < yFactors.length; i++) {
+                factorStr += yFactors[i] + "   ";
+            }
+            
+            document.getElementById("factors").innerHTML = factorStr;
+            return (ySum == x && xSum == y);
+        }
+
+        function isNumeric(str) {
+            if (typeof str != "string") return false 
+            return !isNaN(str) && !isNaN(parseInt(str))
+        }
+
+        function checkAmicable() {
+            let n1 = document.forms["contactForm"]["num1"].value;
+            let n2 = document.forms["contactForm"]["num2"].value;
+
+            if (n1 == "" || n2 == "") {
+                alert("Please enter a number in each text box");
+                return false;
+            }
+
+            if (!isNumeric(n1) || !isNumeric(n2)) {
+                alert("Please enter valid numbers");
+                return false;
+            }
+
+            isAmicable(n1, n2);
+            return true;
+        }
+    </script>
+  </body>
+</html>
