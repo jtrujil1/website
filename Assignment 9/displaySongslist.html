@@ -117,9 +117,10 @@
             }
 
             function displaySetList(data) {
-                var container = document.getElementById("usrFriendly");
+                // var container = document.getElementById("usrFriendly");
+                dataStr = "";
                 for (var i = 0; i < data.length; i++) {
-                    var div = document.createElement("div");
+                    // var div = document.createElement("div");
                     var genreStr = "";
                     for (var j = 0; j < data[i].genre.length; j++) {
                         genreStr += data[i].genre[j];
@@ -127,12 +128,13 @@
                             genreStr += ', ';
                     }
 
-                    container.innerHTML = genreStr;
+                    // container.innerHTML = genreStr;
 
-                    div.innerHTML = data[i].songTitle + '<br>Artist: ' + data[i].artist + '<br>Genre: ' + genreStr + '<br>Released ' + data[i].yearReleased;
+                    dataStr = data[i].songTitle + '<br>Artist: ' + data[i].artist + '<br>Genre: ' + genreStr + '<br>Released ' + data[i].yearReleased + "<br><br>";
                 
-                    container.appendChild(div);
+                    // container.appendChild(div);
                 }
+                document.getElementById("usrFriendly").innerHTML = dataStr;
             }
             
             function filterSongs() {
