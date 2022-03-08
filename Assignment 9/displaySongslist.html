@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Songs List JSON</title>
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+            h1 {
+                font-size: 600%;
+                font-weight: 1;
+                font-family: 'Poppins', sans-serif;
+                text-align: center;
+                padding-top: 3%;
+                padding-bottom: 3%;
+                background-color: #a7f3ed;
+                color:#041b1f;
+                text-shadow: 2px 2px 1px #ffffff;
+            }
+
+            p {
+                font-family: 'Poppins', sans-serif;
+                text-align: left;
+                font-size: 150%;
+                padding-bottom: 0.2%;
+                padding-top: 0.2%;
+            }
+
+            #pickResult, #lbResult, #lbPickResult, #payoutResult, #matchesResult, #sortedResult {
+                border: 1px;
+                color: #F5824E;
+                text-align: center;
+            }
+
+            .container {
+                padding-left: 35%;
+                padding-right: 25%;
+            }
+
+            .results {
+                display: inline-flex;
+                visibility: hidden;
+            }
+
+            .button {
+                background-color: #a7f3ed;
+                border-radius: 20px;
+                align-items: center;
+                padding-left: 5px;
+                padding-right: 5px;
+                width: fit-content;
+                height: auto;
+            }
+
+            @media only screen and (max-width: 800px) {
+                h1 {
+                    font-size: 300%;
+                }
+                p {
+                    font-size: 100%;
+                }
+            }
+        </style>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    </head>
+    <body>
+        <h1>Songs List JSON</h1>
+
+        <div class="container">
+            <p>Displaying JSON set list in different formats...</p>
+            <br>
+            <div class="rawStrCont" style="display: inline-flex;">
+                <p style="padding-right: 6px;">Raw string:</p>
+                <p id="rawStr"> </p>
+            </div>
+            <br>
+            <div class="usrFriendlyCont" style="display: inline-flex;">
+                <p style="padding-right: 6px;">User Friendly Display:</p>
+                <div id="usrFriendly"> </div>
+            </div>
+            <br>
+            <div class="filterCont" style="display: inline-flex;">
+                <p style="padding-right: 6px;">Choose a genre:</p>
+                <p id="filteredList"> </p>
+                <form name="genreForm" >
+                    <select name="genres" id="genres">
+                        <option value="dancePop">Dance Pop</option>
+                        <option value="folk">Folk</option>
+                        <option value="indie">Indie</option>
+                        <option value="newWave">New Wave</option>
+                        <option value="newEra">New Era</option>
+                        <option value="pop">Pop</option>
+                        <option value="postPunk">Post Punk</option>
+                        <option value="popRock">Pop Rock</option>
+                        <option value="rock">Rock</option>
+                 </select>
+                    <input type="button" value="Filter" id="button" onclick="return filterSongs()">
+                </form>
+            </div>
+        </div>
+        <script>
+        
+            fetch('songslist.json') 
+                .then(function(response) {
+                    return response.json();
+            })
+            .then(function(data) {
+                displayRawStr(data);
+                displaySetList(data);
+            })
+            .catch(function(err) {
+                console.log(err);
+            });
+
+            function displayRawStr(data) {
+                var jsonStr = JSON.stringify(data);
+                document.getElementById("rawStr").innerHTML = jsonStr;
+
+            }
+
+            function displaySetList(data) {
+                var container = document.getElementById("usrFriendly");
+                for (var i = 0; i < data.length; i++) {
+                    var div = document.createElement("div");
+                    var genreStr = "";
+                    for (var j = 0; j < data[i].genre.length; j++) {
+                        genreStr += data[i].genre[j];
+                        if (j+1 < data[i].genre.length)
+                            genreStr += ', ';
+                    }
+
+                    div.innerHTML = data[i].songTitle + '<br>Artist: ' + data[i].artist + '<br>Genre: ' + genreStr + '<br>Released ' + data[i].yearReleased;
+                
+                    container.appendChild(div);
+                }
+            }
+            
+            function filterSongs() {
+            
+            }
+
+        </script>
+    </body>
+</html>
