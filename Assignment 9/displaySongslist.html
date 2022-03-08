@@ -32,8 +32,8 @@
             }
 
             .container {
-                padding-left: 35%;
-                padding-right: 25%;
+                padding-left: 20%;
+                padding-right: 20%;
             }
 
             .results {
@@ -60,13 +60,10 @@
                 }
             }
         </style>
-        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
     </head>
     <body>
         <h1>Songs List JSON</h1>
-
         <div class="container">
             <p>Displaying JSON set list in different formats...</p>
             <br>
@@ -129,6 +126,8 @@
                         if (j+1 < data[i].genre.length)
                             genreStr += ', ';
                     }
+
+                    container.innerHTML = genreStr;
 
                     div.innerHTML = data[i].songTitle + '<br>Artist: ' + data[i].artist + '<br>Genre: ' + genreStr + '<br>Released ' + data[i].yearReleased;
                 
