@@ -1,87 +1,89 @@
-[
-    {
-        "songTitle": "Mi Lugar Favorito",
-        "artist": "Natalia Lafourcade",
-        "genres": [
-            { "genre": "Indie"},
-            {"genre": "Pop"}
-        ],
-        "yearReleased": "2015"
-    },
-    {
-        "songTitle": "Just Like Heaven",
-        "artist": "The Cure",
-        "genres": [
-            {"genre": "Post Punk"},
-            {"genre": "New Wave"}
-        ],
-        "yearReleased": "1987"
-    },
-    {
-        "songTitle": "Up",
-        "artist": "The Score",
-        "genres": [
-            {"genre": "Pop"}
-        ],
-        "yearReleased": "2016"
-    },
-    {
-        "songTitle": "Manda Una Señal",
-        "artist": "Maná",
-        "genres": [
-            {"genre": "Rock"}
-        ],
-        "yearReleased": "2006"
-    },
-    {
-        "songTitle": "Come On Eileen",
-        "artist": "Dexys Midnight Runners",
-        "genres": [
-            {"genre": "Folk"},
-            {"genre": "Pop"}
-        ],
-        "yearReleased": "1982"
-    },
-    {
-        "songTitle": "Espacio Sideral",
-        "artist": "Jesse & Joy",
-        "genres": [
-            {"genre": "Pop Rock"}
-        ],
-        "yearReleased": "2006"
-    },
-    {
-        "songTitle": "Easy Lover",
-        "artist": "Philip Bailey",
-        "genres": [
-            {"genre": "Dance Pop"}
-        ],
-        "yearReleased": "1985"
-    },
-    {
-        "songTitle": "Valiente",
-        "artist": "Vetusta Morla",
-        "genres": [
-            {"genre": "Rock"}
-        ],
-        "yearReleased": "2008"
-    },
-    {
-        "songTitle": "All the Love in the World",
-        "artist": "The Outfield",
-        "genres": [
-            {"genre": "Pop Rock"},
-            {"genre": "New Wave"}
-        ],
-        "yearReleased": "1985"
-    },
-    {
-        "songTitle": "Ser Parte",
-        "artist": "Siddhartha",
-        "genres": [
-            {"genre": "Indie"},
-            {"genre": "New Era"}
-        ],
-        "yearReleased": "2016"
-    }
-]
+{
+    "songs": [
+       {
+          "songTitle": "Mi Lugar Favorito",
+          "artist": "Natalia Lafourcade",
+          "genres": [
+              { "genre": "Indie"},
+              {"genre": "Pop"}
+            ],
+          "yearReleased": "2015"
+       },
+       {
+          "songTitle": "Just Like Heaven",
+          "artist": "The Cure",
+          "genres": [
+              {"genre": "Post Punk"},
+              {"genre": "New Wave"}
+            ],
+          "yearReleased": "1987"
+       },
+       {
+          "songTitle": "Up",
+          "artist": "The Score",
+          "genres": [
+              {"genre": "Pop"}
+            ],
+          "yearReleased": "2016"
+       },
+       {
+          "songTitle": "Manda Una Señal",
+          "artist": "Maná",
+          "genres": [
+                {"genre": "Rock"}
+            ],
+          "yearReleased": "2006"
+       },
+       {
+          "songTitle": "Come On Eileen",
+          "artist": "Dexys Midnight Runners",
+          "genres": [
+              {"genre": "Folk"},
+              {"genre": "Pop"}
+            ],
+          "yearReleased": "1982"
+       },
+       {
+          "songTitle": "Espacio Sideral",
+          "artist": "Jesse & Joy",
+          "genres": [
+              {"genre": "Pop Rock"}
+            ],
+          "yearReleased": "2006"
+       },
+       {
+          "songTitle": "Easy Lover",
+          "artist": "Philip Bailey",
+          "genres": [
+              {"genre": "Dance Pop"}
+            ],
+          "yearReleased": "1985"
+       },
+       {
+          "songTitle": "Valiente",
+          "artist": "Vetusta Morla",
+          "genres": [
+              {"genre": "Rock"}
+            ],
+          "yearReleased": "2008"
+       },
+       {
+          "songTitle": "All the Love in the World",
+          "artist": "The Outfield",
+          "genres": [
+              {"genre": "Pop Rock"},
+              {"genre": "New Wave"}
+            ],
+          "yearReleased": "1985"
+       },
+       {
+          "songTitle": "Ser Parte",
+          "artist": "Siddhartha",
+          "genres": [
+              {"genre": "Indie"},
+              {"genre": "New Era"}
+            ],
+          "yearReleased": "2016"
+       }
+    ]
+ }
