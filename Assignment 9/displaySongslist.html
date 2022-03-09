@@ -120,7 +120,7 @@
             function displaySetList(data) {
                 // var container = document.getElementById("usrFriendly");
                 data = data.songs
-                var dataStr = "";
+                var dataStr = data.length + "!! ";
                 // document.write("data length = " + data.length);
                 // var genres = data.genres
                 // document.write("genre length = " + data[0].genres.length);
@@ -129,7 +129,7 @@
                     var genreStr = "";
                     // document.write("genre length = " + data[i].genre.length);
                     for (var j = 0; j < data[i].genres.length; j++) {
-                        genreStr += data[i].genres[j];
+                        genreStr += data[i].genres[j].genre;
                         if (j+1 < data[i].genres.length)
                             genreStr += ', ';
                     }
