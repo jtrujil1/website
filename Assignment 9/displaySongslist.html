@@ -123,14 +123,14 @@
                 var dataStr = "";
                 // document.write("data length = " + data.length);
                 // var genres = data.genres
-                document.write("genre length = " + data[0].genres.length);
+                // document.write("genre length = " + data[0].genres.length);
                 for (var i = 0; i < data.length; i++) {
                     // var div = document.createElement("div");
                     var genreStr = "";
                     // document.write("genre length = " + data[i].genre.length);
-                    for (var j = 0; j < data[i].genre.length; j++) {
-                        genreStr += data[i].genre[j];
-                        if (j+1 < data[i].genre.length)
+                    for (var j = 0; j < data[i].genres.length; j++) {
+                        genreStr += data[i].genres[j];
+                        if (j+1 < data[i].genres.length)
                             genreStr += ', ';
                     }
 
@@ -142,7 +142,7 @@
                 
                     // container.appendChild(div);
                 }
-                // document.getElementById("usrFriendly").innerHTML = dataStr;
+                document.getElementById("usrFriendly").innerHTML = dataStr;
                 // document.write(dataStr);
             }
             
