@@ -97,6 +97,7 @@
             </div>
         </div>
         <script>
+            // document.getElementById("usrFriendly").innerHTML = 'helooooo';
         
             fetch('songslist.json') 
                 .then(function(response) {
@@ -135,6 +136,7 @@
                     // container.appendChild(div);
                 }
                 document.getElementById("usrFriendly").innerHTML = dataStr;
+                document.write(dataStr);
             }
             
             function filterSongs() {
