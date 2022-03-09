@@ -67,18 +67,18 @@
         <div class="container">
             <p>Displaying JSON set list in different formats...</p>
             <br>
-            <div class="rawStrCont" style="display: inline-flex;">
+            <div class="rawStrCont" style="display: flex; flex-direction: column;">
                 <p style="padding-right: 6px;">Raw string:</p>
                 <p id="rawStr"> </p>
             </div>
             <br>
-            <div class="usrFriendlyCont" style="display: inline-flex;">
+            <div class="usrFriendlyCont" style="display: flex; flex-direction: column;">
                 <p style="padding-right: 6px;">User Friendly Display:</p>
                 <div id="usrFriendly"> </div>
             </div>
             <br>
             <div class="filterCont" style="display: inline-flex;">
-                <p style="padding-right: 6px;">Choose a genre:</p>
+                <p style="padding-right: 6px; padding-top: 30px;">Choose a genre:</p>
                 <p id="filteredList"> </p>
                 <form name="genreForm" >
                     <select name="genres" id="genres">
@@ -118,16 +118,11 @@
             }
 
             function displaySetList(data) {
-                // var container = document.getElementById("usrFriendly");
                 data = data.songs
-                var dataStr = data.length + "!! ";
                 // document.write("data length = " + data.length);
-                // var genres = data.genres
                 // document.write("genre length = " + data[0].genres.length);
                 for (var i = 0; i < data.length; i++) {
-                    // var div = document.createElement("div");
                     var genreStr = "";
-                    // document.write("genre length = " + data[i].genre.length);
                     for (var j = 0; j < data[i].genres.length; j++) {
                         genreStr += data[i].genres[j].genre;
                         if (j+1 < data[i].genres.length)
