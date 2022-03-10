@@ -5,6 +5,10 @@
         <style>
             @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
+            * {
+                font-family: 'Poppins', sans-serif;
+            }
+
             h1 {
                 font-size: 600%;
                 font-weight: 1;
@@ -12,7 +16,7 @@
                 text-align: center;
                 padding-top: 3%;
                 padding-bottom: 3%;
-                background-color: #a7f3ed;
+                background-color: #B99EFA;
                 color:#041b1f;
                 text-shadow: 2px 2px 1px #ffffff;
             }
@@ -27,7 +31,7 @@
 
             #usrFriendly {
                 border: 1px;
-                color: #F5824E;
+                color: #84D4E3;
                 text-align: center;
             }
 
@@ -136,6 +140,8 @@
             
             function filterSongs() {
                 var selectedGenre = document.getElementById("genreOption").value;
+                var e = document.getElementById("genreOption");
+                var selectedGenre = e.options[e.selectedIndex].text;
                 document.write("genre = " + selectedGenre);
             //     for (var i = 0; i < data.length; i++) {
             //         var genreStr = "";
