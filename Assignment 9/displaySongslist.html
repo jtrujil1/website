@@ -40,6 +40,12 @@
                 padding-right: 20%;
             }
 
+            .filterCont {
+                display: flex;
+                flex-direction: column;
+                padding-bottom: 100px;
+            }
+
             select {
                 font-size: 150%;
                 width: fit-content;
@@ -82,7 +88,7 @@
                 <div id="usrFriendly"> </div>
             </div>
             <br>
-            <div class="filterCont" style="display: flex; flex-direction: column;">
+            <div class="filterCont">
                 <p style="padding-right: 6px; padding-top: 30px;">Choose a genre:</p>
                 <p id="filteredList"> </p>
                 <form name="genreForm" >
@@ -152,7 +158,7 @@
                 for (var i = 0; i < songs.length; i++) {
                     var genreStr = "";
                     for (var j = 0; j < songs[i].genres.length; j++) {
-                        if (data[i].genres[j].genre == selectedGenre)
+                        if (songs[i].genres[j].genre == selectedGenre)
                             songsStr += songs[i].songTitle + "<br><br>"
                     }                
                 }
