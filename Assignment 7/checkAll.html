@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <title>Check All</title>
+        
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+            * {
+                font-family: 'Poppins', sans-serif;
+            }
+
+            h1 {
+                display: none;
+            }
+
+            .container {
+                /* margin-top: 200px; */
+                margin: 20% 30%;
+                display: flex;
+                flex-direction: column;
+                align-items: left;
+                justify-content: left;
+                align-content: stretch;
+                border: black solid 2px;
+            }
+
+            p {
+                font-family: 'Poppins', sans-serif;
+                text-align: left;
+                font-size: 150%;
+            }
+
+            input[type=text] {
+                height: 80px;
+            }
+
+            .button {
+                background-color: #a7f3ed;
+                border-radius: 20px;
+                align-items: center;
+                padding-left: 5px;
+                padding-right: 5px;
+                width: fit-content;
+                height: auto;
+                margin: 0 50px;
+                border: solid black 1px;
+            }
+        </style>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Check All</h1>
+        <div class="container">
+            <div class="row">
+                <input type="checkbox" id="checkAll" name="checkAll" value="CheckAll" onchange="checkAllBoxes(this)">
+                <label  id="checkAllLabel" for="checkAll"> Check All</label>
+            </div>
+            <br>
+            <div class="row">
+                <input type="checkbox" id="first" name="first" value="First">
+                <label for="first"> First</label><br>
+            </div>
+            
+            <div class="row">
+                <input type="checkbox" id="second" name="second" value="Second">
+                <label for="second"> Second</label><br>
+            </div>
+            
+            <div class="row">
+                <input type="checkbox" id="third" name="third" value="Third">
+                <label for="third"> Third</label><br>
+            </div>
+        </div>  
+        <script>
+            function checkAllBoxes(checkbox) {
+                if (checkbox.checked) {
+                    document.getElementById("first").checked = true;
+                    document.getElementById("second").checked = true;
+                    document.getElementById("third").checked = true;
+                    document.getElementById("checkAllLabel").innerHTML = "Uncheck All";
+                } else {
+                    document.getElementById("first").checked = false;
+                    document.getElementById("second").checked = false;
+                    document.getElementById("third").checked = false;
+                    document.getElementById("checkAllLabel").innerHTML = "Check All";
+                }
+            }
+        </script>
+    </body>
+</html>
