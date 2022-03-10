@@ -76,7 +76,7 @@
                 <p style="padding-right: 6px; padding-top: 30px;">Choose a genre:</p>
                 <p id="filteredList"> </p>
                 <form name="genreForm" >
-                    <select name="genres" id="genres">
+                    <select name="genreOption" id="genreOption">
                         <option value="dancePop">Dance Pop</option>
                         <option value="folk">Folk</option>
                         <option value="indie">Indie</option>
@@ -89,10 +89,11 @@
                  </select>
                     <input type="button" value="Filter" id="button" onclick="return filterSongs()">
                 </form>
+                <div id="filteredSongs"> </div>
             </div>
         </div>
         <script>
-            // document.getElementById("usrFriendly").innerHTML = 'helooooo';
+            var songs;
         
             fetch('songslist.json') 
                 .then(function(response) {
@@ -113,7 +114,9 @@
             }
 
             function displaySetList(data) {
-                data = data.songs
+                data = data.songs;
+                songs = data;
+                var dataStr = ""
                 // document.write("data length = " + data.length);
                 // document.write("genre length = " + data[0].genres.length);
                 for (var i = 0; i < data.length; i++) {
@@ -123,22 +126,30 @@
                         if (j+1 < data[i].genres.length)
                             genreStr += ', ';
                     }
-
                     // document.write(genreStr);
-
-                    // container.innerHTML = genreStr;
-
                     dataStr += data[i].songTitle + '<br>Artist: ' + data[i].artist + '<br>Genre: ' + genreStr + '<br>Released ' + data[i].yearReleased + "<br><br>";
                 
-                    // container.appendChild(div);
                 }
-                document.getElementById("usrFriendly").innerHTML = dataStr;
                 // document.write(dataStr);
+                document.getElementById("usrFriendly").innerHTML = dataStr;
             }
             
             function filterSongs() {
-            
-            }
+                var selectedGenre = document.getElementById("genreOption").value;
+                document.write("genre = " + selectedGenre);
+            //     for (var i = 0; i < data.length; i++) {
+            //         var genreStr = "";
+            //         for (var j = 0; j < data[i].genres.length; j++) {
+            //             genreStr += data[i].genres[j].genre;
+            //             if (j+1 < data[i].genres.length)
+            //                 genreStr += ', ';
+            //         }
+            //         // document.write(genreStr);
+            //         dataStr += data[i].songTitle + '<br>Artist: ' + data[i].artist + '<br>Genre: ' + genreStr + '<br>Released ' + data[i].yearReleased + "<br><br>";
+                
+            //     }
+            //     document.getElementById("filteredSongs").innerHTML = dataStr;
+            // }
 
         </script>
     </body>
