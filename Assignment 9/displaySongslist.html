@@ -41,10 +41,12 @@
             }
 
             select {
-                width: 30px;
+                font-size: 150%;
+                width: fit-content;
             }
 
             #button {
+                font-size: 150%;
                 background-color: #a7f3ed;
                 border-radius: 20px;
                 align-items: center;
@@ -147,11 +149,11 @@
                 var selectedGenre = e.options[e.selectedIndex].text;
                 var songsStr = "";
                 // document.write("genre = " + selectedGenre);
-                for (var i = 0; i < data.length; i++) {
+                for (var i = 0; i < songs.length; i++) {
                     var genreStr = "";
-                    for (var j = 0; j < data[i].genres.length; j++) {
+                    for (var j = 0; j < songs[i].genres.length; j++) {
                         if (data[i].genres[j].genre == selectedGenre)
-                            songsStr += data[i].songTitle + "<br><br>"
+                            songsStr += songs[i].songTitle + "<br><br>"
                     }                
                 }
                 document.getElementById("filteredSongs").innerHTML = songsStr;
