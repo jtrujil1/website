@@ -19,6 +19,7 @@
                 background-color: #B99EFA;
                 color:#041b1f;
                 text-shadow: 2px 2px 1px #ffffff;
+                margin: 0;
             }
 
             p {
@@ -48,12 +49,12 @@
             }
 
             select {
-                font-size: 100%;
+                font-size: 125%;
                 width: fit-content;
             }
 
             #button {
-                font-size: 100%;
+                font-size: 125%;
                 background-color: #a7f3ed;
                 border-radius: 20px;
                 align-items: center;
@@ -61,6 +62,7 @@
                 padding-right: 5px;
                 width: fit-content;
                 height: auto;
+                margin-left: 15px;
             }
 
             @media only screen and (max-width: 800px) {
@@ -91,7 +93,7 @@
             <br>
             <div class="filterCont">
                 <p style="padding-right: 6px; padding-top: 30px;">Choose songs by genre:</p>
-                <form name="genreForm" style="align-items: center; justify-content: center;" >
+                <form name="genreForm" style="align-items: center; justify-content: center; display: flex;">
                     <select name="genreOption" id="genreOption">
                         <option value="dancePop">Dance Pop</option>
                         <option value="folk">Folk</option>
