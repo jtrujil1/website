@@ -40,6 +40,10 @@
                 padding-right: 20%;
             }
 
+            select {
+                width: 30px;
+            }
+
             #button {
                 background-color: #a7f3ed;
                 border-radius: 20px;
@@ -76,7 +80,7 @@
                 <div id="usrFriendly"> </div>
             </div>
             <br>
-            <div class="filterCont" style="display: inline-flex;">
+            <div class="filterCont" style="display: flex; flex-direction: column;">
                 <p style="padding-right: 6px; padding-top: 30px;">Choose a genre:</p>
                 <p id="filteredList"> </p>
                 <form name="genreForm" >
@@ -139,22 +143,18 @@
             }
             
             function filterSongs() {
-                var selectedGenre = document.getElementById("genreOption").value;
                 var e = document.getElementById("genreOption");
                 var selectedGenre = e.options[e.selectedIndex].text;
-                document.write("genre = " + selectedGenre);
-            //     for (var i = 0; i < data.length; i++) {
-            //         var genreStr = "";
-            //         for (var j = 0; j < data[i].genres.length; j++) {
-            //             genreStr += data[i].genres[j].genre;
-            //             if (j+1 < data[i].genres.length)
-            //                 genreStr += ', ';
-            //         }
-            //         // document.write(genreStr);
-            //         dataStr += data[i].songTitle + '<br>Artist: ' + data[i].artist + '<br>Genre: ' + genreStr + '<br>Released ' + data[i].yearReleased + "<br><br>";
-                
-            //     }
-            //     document.getElementById("filteredSongs").innerHTML = dataStr;
+                var songsStr = "";
+                // document.write("genre = " + selectedGenre);
+                for (var i = 0; i < data.length; i++) {
+                    var genreStr = "";
+                    for (var j = 0; j < data[i].genres.length; j++) {
+                        if (data[i].genres[j].genre == selectedGenre)
+                            songsStr += data[i].songTitle + "<br><br>"
+                    }                
+                }
+                document.getElementById("filteredSongs").innerHTML = songsStr;
             }
 
         </script>
