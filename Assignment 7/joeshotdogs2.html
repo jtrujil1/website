@@ -1,0 +1,165 @@
+<html>
+    <head>
+        <title>Joe's Hotdog Stand</title>
+        
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Modak&family=Patrick+Hand&display=swap");
+
+            h1 {
+                font-size: 600%;
+                font-weight: 1;
+                font-family: 'Modak', cursive;
+                text-align: center;
+                padding-top: 3%;
+                padding-bottom: 3%;
+                background-color: #E61D07;
+                color:#FFD33C;
+                text-shadow: 2px 2px 1px #E66512;
+            }
+
+            h3, h4 {
+                font-family: 'Patrick Hand', cursive;
+                text-align: left;
+                font-size: 250%;
+                padding-bottom: 0.2%;
+                padding-top: 0.2%;
+            }
+
+            h3 {
+                padding-left: 45%;
+                color: #E66512;
+            }
+
+            h4 {
+                padding-left: 35%;
+                color: #E61D07;
+            }
+
+            .row {
+                padding: 0 15%;
+                font-family: 'Patrick Hand', cursive;
+                color: #E61D07;
+                display: flex;
+                flex-direction: row;
+                font-size: 150%;
+                align-items: center;
+                justify-content: center;
+            }
+
+            #button {
+                font-family: 'Patrick Hand', cursive;
+                font-size: 125%;
+                /* background-color: #f17a6d; */
+                border-radius: 10px;
+                align-items: center;
+                margin-left: 50%;
+                padding-left: 5px;
+                padding-right: 5px;
+                width: fit-content;
+                height: auto;
+                margin-left: 15px;
+            }
+
+            @media only screen and (max-width: 800px) {
+                h1 {
+                    font-size: 400%;
+                }
+                h3, h4 {
+                    font-size: 200%;
+                }
+            }
+        </style>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Joe's Hotdog Stand</h1>
+        <div class="menu">
+            <div class="row">
+                <h2 style="padding-right: 20px;">Hotdogs</h2>
+                <p style="padding-right: 20px;">$3.75</p>
+                <select name="hotdogs" id="hotdogs">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+            <div class="row">
+                <h2 style="padding-right: 20px;">Fries</h2>
+                <p style="padding-right: 20px;">$2.00</p>
+                <select name="fries" id="fries">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+            <div class="row">
+                <h2 style="padding-right: 20px;">Sodas</h2>
+                <p style="padding-right: 20px;">$1.80</p>
+                <select name="sodas" id="sodas">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+            <input type="button" value="Check" id="button" onclick="return calculateTotal()">
+
+            <div id="order"></div>
+        </div>
+        <script>
+            function calculateTotal () {
+                var hotdogs = document.getElementById("hotdogs");
+                hotdogs = hotdogs.options[hotdogs.selectedIndex].text;
+                
+                var fries = document.getElementById("fries");
+                fries = fries.options[fries.selectedIndex].text;
+
+                var sodas = document.getElementById("sodas");
+                sodas = sodas.options[sodas.selectedIndex].text;
+
+                var subtotal = (hotdogs * 3.75) + (fries * 2.00) + (sodas * 1.80);
+                var discount = 0;
+
+                if (subtotal >= 20.00) {
+                    discount = subtotal * 0.10;
+                    subtotal -= discount;
+                }
+
+                var tax = subtotal * 0.0625;
+                var total = subtotal + tax;
+
+                var orderOutput = "<h4>Order:</h4>";
+                orderOutput +="<h3>" + hotdogs + " x hotdogs</h3>";
+                orderOutput +="<h3>" + fries + " x fries</h3>";
+                orderOutput +="<h3>" + sodas + " x sodas</h3>";
+
+                orderOutput +="<h4>subtotal: $" + Number(subtotal).toFixed(2) 
+                    + "</h4>";
+
+                if (discount > 0)
+                    orderOutput +="<h4>discount: $" + Number(discount).toFixed(2) 
+                        + "</h4>";
+
+                orderOutput +="<h4>tax: $" + Number(tax).toFixed(2) + "</h4>";
+                orderOutput +="<h4>total: $" + Number(total).toFixed(2)
+                    + "</h4>";
+
+                document.getElementById("order").innerHTML = orderOutput;
+            }
+        </script>
+    </body>
+</html>
