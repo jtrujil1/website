@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <title>Viral Songs Generator</title>
+        
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+
+            * {
+                font-family: 'Montserrat', sans-serif;
+                color: white;
+            }
+
+            body {
+                background-color: 	#121212;
+                padding-top: 100px;
+            }
+
+            h1 {
+                background-color: #1DB954;
+                text-align: center;
+                font-size: 50px;
+                margin: 0 30%;
+                border-radius: 50px;
+                width: 50%;
+            }
+
+            h3{
+                font-size: 140%;
+            }
+
+            h2{
+                font-size: 180%;
+            }
+
+            p {
+
+            }
+
+            .container {
+                margin: 3% 20%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                align-content: stretch;
+                border-top: #535353 solid 1px;
+                border-bottom: #535353 solid 1px;
+            }
+        </style>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Viral Songs Generator</h1>
+        <div class="container">
+            <div id="song_cover" style="padding-right: 50px;"></div>
+            <div id="song_container"></div>
+        </div>  
+        <p style="margin: 3% 20%;">Created using the Spoify Charts API<br>Allows users to get the daily and weekly charts from each country<br>Source: https://rapidapi.com/hub<br>Choose between countries, regional or viral and daily or weekly charts, dated today or chosen date<br>Used the U.S. daily viral chart dated today<br>Can be used to display the #1 hit song of the week, get the links for viral songs to play on Spotify, etc.</p>
+        <script>
+            const data = null;
+            const request = new XMLHttpRequest();
+            request.withCredentials = true;
+
+            request.addEventListener("readystatechange", function () {
+                // alert(this.readyState);
+                // alert(this.status);
+                if(this.readyState == 4 && this.status == 200) {
+                    result = this.responseText;
+                    randomSong(JSON.parse(result).content);
+                }
+                if (this.readyState === this.DONE) {
+                    result = this.responseText;
+                    // console.log(this.responseText.content);
+                    // console.log(JSON.parse(result));
+                    console.log(result);
+    
+                }
+            });
+
+            request.open("GET", "https://spotfiy-charts.p.rapidapi.com/?type=regional&country=global&recurrence=daily&date=latest");
+            request.setRequestHeader("x-rapidapi-host", "spotfiy-charts.p.rapidapi.com");
+            request.setRequestHeader("x-rapidapi-key", "058c67521emsh695eebb1e256cb8p1f6e58jsn832d243b633f");
+
+            request.send(data);
+
+            function randomSong(content) {
+                var num = Math.floor(Math.random() * 200);
+                // document.write(num);
+                var song = content[num];
+                var song_str = "<h2>" + song.track_title + "</h2>" + "<h3>";
+                
+                for(i = 0; i < song.artists.length; i++) {
+                    song_str += song.artists[i]
+                    if (i+1 < song.artists.length)
+                        song_str += ', ';
+                }
+
+                song_str += "</h3>";
+
+                // alert(song_str);
+                var elem = document.createElement("img");
+                elem.setAttribute("height", "60px");
+                elem.src = song.thumbnail;
+                document.getElementById("song_cover").appendChild(elem);
+                document.getElementById("song_container").innerHTML = song_str;
+            }
+            
+        </script>
+    </body>
+</html>
